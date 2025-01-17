@@ -46,7 +46,7 @@
     id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Menu</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn justify-content-end" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-list"></i></button>
     </div>
     <hr>
     <div class="offcanvas-body">
