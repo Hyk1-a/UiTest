@@ -1,0 +1,19 @@
+@import 'bootstrap/scss/bootstrap';
+
+
+th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+td {
+    text-align: center;
+    align-items: middle;
+    vertical-align: middle;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-align: center;
+}
+
