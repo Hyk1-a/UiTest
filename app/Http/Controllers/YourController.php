@@ -8,7 +8,8 @@ use App\Models\FormData;
 class YourController extends Controller
 {
     public function show()
-    {   
+    {      
+        $data = FormData::all();
         $data = FormData::paginate(10);
         return view('table1', ['data' => $data]);
     }
