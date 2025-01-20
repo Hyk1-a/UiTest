@@ -7,9 +7,12 @@ use App\Models\FormData;
 use Illuminate\Support\Str;
 class YourController extends Controller
 {
-    public function show()
+    public function view($id){
+        $showid = FormData::findOrFail($id);
+        return view('tableview', compact('showid'));
+    }
+    public function index()
     {      
-        $data = FormData::all();
         $data = FormData::paginate(10);
         return view('table1', ['data' => $data]);
     }
@@ -25,7 +28,7 @@ class YourController extends Controller
             'brothername' => 'string|max:255|nullable|min:1',
             'sistername' => 'string|max:255|nullable|min:1',
             'dob' => 'required|date',
-            'about' => 'string|max:1000|nullable',
+            'about' => 'text|max:1000|nullable',
         ]);
 
         FormData::create($request->all());   

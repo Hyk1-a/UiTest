@@ -12,7 +12,9 @@
                         <input type="text" class="form-control" name="firstname" placeholder="FirstName"
                             aria-describedby="basic-addon1" value="{{ old('firstname') }}">
                     </div>
-                    @error('firstname') <div class="text-danger">{{ $message }}</div>@enderror
+                    @error('firstname')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
 
                     <div class="input-group mb-3 mt-3">
                         <span class="input-group-text" id="basic-addon1" value="{{ old('lastname') }}">
@@ -21,7 +23,9 @@
                         <input type="text" class="form-control" name="lastname" placeholder="LastName"
                             aria-describedby="basic-addon1">
                     </div>
-                    @error('lastname') <div class="text-danger">{{ $message }}</div>@enderror
+                    @error('lastname')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
 
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">
@@ -39,7 +43,9 @@
                         <input type="text" class="form-control" name="fathername" placeholder="Your Father Name"
                             aria-describedby="basic-addon1" value="{{ old('fathername') }}">
                     </div>
-                    @error('fathername') <div class="text-danger">{{ $message }}</div> @enderror
+                    @error('fathername')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
 
                     <div class="input-group mb-3 mt-3">
                         <span class="input-group-text" id="basic-addon1">
@@ -47,7 +53,9 @@
                         <input type="text" class="form-control" name="mothername" placeholder="Your Mother Name"
                             aria-describedby="basic-addon1" value="{{ old('mothername') }}">
                     </div>
-                    @error('mothername') <div class="text-danger">{{ $message }}</div> @enderror
+                    @error('mothername')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
 
                     <div class="input-group mb-3 mt-3">
                         <span class="input-group-text" id="basic-addon1">
@@ -55,7 +63,9 @@
                         <input type="text" class="form-control" name="brothername" placeholder="Your Brother Name"
                             aria-describedby="basic-addon1" value="{{ old('brothername') }}">
                     </div>
-                    @error('brothername') <div class="text-danger">{{ $message }}</div> @enderror
+                    @error('brothername')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
 
                     <div class="input-group mb-3 mt-3">
                         <span class="input-group-text" id="basic-addon1">
@@ -63,19 +73,25 @@
                         <input type="text" class="form-control" name="sistername" placeholder="Your Sister Name"
                             aria-describedby="basic-addon1" value="{{ old(key: 'sistername') }}">
                     </div>
-                    @error('sistername') <div class="text-danger">{{ $message }}</div> @enderror
+                    @error('sistername')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
 
                     <div class="input-group mb-3 mt-3">
                         <span class="input-group-text" id="basic-addon1">Date Of birth
-                        </span> <input type="text" class="form-control" name="dob" placeholder="YYYY-MM-DD"
+                        </span> <input type="text" class="form-control" name="dob" placeholder="DD-MM-YYYY"
                             aria-describedby="basic-addon1" value="{{ old('dob') }}">
                     </div>
-                    @error('dob') <div class="text-danger">{{ $message }}</div> @enderror
+                    @error('dob')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
 
                     <div class="input-group mb-3 mt-3">
-                        <textarea name="about" cols="70" rows="2" placeholder="About Yourself" >{{ old('about') }}</textarea>
+                        <textarea name="about" cols="70" rows="4" placeholder="About Yourself">{{ old('about') }}</textarea>
                     </div>
-                    @error('about') <div class="text-danger">{{ $message }}</div> @enderror
+                    @error('about')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
 
                     <div class="row">
                         <button type="submit" class="btn btn-primary ">Submit</button>

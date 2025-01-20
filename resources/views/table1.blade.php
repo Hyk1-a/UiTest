@@ -14,6 +14,7 @@
                                 class="bi bi-people-fill me-1"></i>Family
                             Names</th>
                         <th colspan="2" class="text-decoration-underline">Personal Details</th>
+                        <th colspan="1"></th>
                     </tr>
 
                     <tr>
@@ -26,25 +27,26 @@
                         <th class="col-1">Sister Names</th>
                         <th class="col-3"><i class="bi bi-info-circle me-1"></i>About</th>
                         <th class="col-1"><i class="bi bi-cake-fill me-1"></i>Birthday</th>
+                        <th></th>
                     </tr>
                 </thead>
-
+ 
                 <tbody class="table-group-divider">
                     @foreach ($data ?? [] as $item)
                         <tr>
                             <td class="increment-number"></td>
-                            <td>{{ $item->firstname }}</td>
-                            <td>{{ $item->lastname }}</td>
+                            <td>{{ Str::words($item->firstname, 2,'...') }}</td>
+                            <td>{{ Str::words($item->lastname,2,'...') }}</td>
                             <td>{{ $item->gender }}</td>
-                            <td>{{ $item->fathername }}</td>
-                            <td>{{ $item->mothername }}</td>
-                            <td>{{ $item->brothername }}</td>
-                            <td>{{ $item->sistername }}</td>
+                            <td>{{ Str::words($item->fathername,2,'...') }}</td>
+                            <td>{{ Str::words($item->mothername,2,'...') }}</td>
+                            <td>{{ Str::words($item->brothername,2,'...') }}</td>
+                            <td>{{ Str::words($item->sistername,2,'...') }}</td>
                             <td>{{ Str::words($item->about, 5, ' ...') }}</td>
                             <td>{{ \Carbon\Carbon::parse($item->dob)->format('d-m-Y') }}</td>
+                            <td><a href="{{ route('view', $item->id) }}" class="btn btn-success">view</a></td>
                         </tr>
                     @endforeach
-
                 </tbody>
             </table>
             <div class="d-flex justify-content-center">

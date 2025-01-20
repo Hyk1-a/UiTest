@@ -13,13 +13,10 @@ Route::get('/table', function(){
     return view('table');
 })->name('table');
 
-Route::get('/table1', function(){
-    return view('table1');
-})->name('table1');
 
+Route::get('view/{id}', [YourController::class, 'view'])->name('view');
 
-
-Route::get('/form', [YourController::class, 'show'])->name('form');
+Route::get('/form', [YourController::class, 'index'])->name('form');
 Route::post('/form-submit', [YourController::class, 'submit'])->name('submit');
 
 
