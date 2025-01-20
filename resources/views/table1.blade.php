@@ -40,7 +40,7 @@
                             <td>{{ $item->mothername }}</td>
                             <td>{{ $item->brothername }}</td>
                             <td>{{ $item->sistername }}</td>
-                            <td>{{ \Illuminate\Support\Str::words($item->about, 5, ' ...') }}</td>
+                            <td>{{ Str::words($item->about, 5, ' ...') }}</td>
                             <td>{{ \Carbon\Carbon::parse($item->dob)->format('d-m-Y') }}</td>
                         </tr>
                     @endforeach
@@ -52,6 +52,7 @@
             </div>
         </div>
     </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const incrementNumberCells = document.querySelectorAll('.increment-number');

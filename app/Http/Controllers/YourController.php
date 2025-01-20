@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\FormData;
-
+use Illuminate\Support\Str;
 class YourController extends Controller
 {
     public function show()
@@ -17,13 +17,13 @@ class YourController extends Controller
     public function submit(Request $request)
     {
         $request->validate([
-            'firstname' => 'required|string|max:255',
-            'lastname' => 'required|string|max:255',
+            'firstname' => 'required|string|max:255|min:1',
+            'lastname' => 'required|string|max:255|min:1',
             'gender' => 'required',
-            'fathername' => 'required|string|max:255',
-            'mothername' => 'required|string|max:255',
-            'brothername' => 'string|max:255|nullable',
-            'sistername' => 'string|max:255|nullable',
+            'fathername' => 'required|string|max:255|min:1',
+            'mothername' => 'required|string|max:255|min:1',
+            'brothername' => 'string|max:255|nullable|min:1',
+            'sistername' => 'string|max:255|nullable|min:1',
             'dob' => 'required|date',
             'about' => 'string|max:1000|nullable',
         ]);
