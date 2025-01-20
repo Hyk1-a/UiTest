@@ -44,7 +44,8 @@
                 </tbody>
             </table>
             <div class="d-flex justify-content-end">
-                <a href="{{ route('form') }}" class="btn btn-outline-secondary">&larr;Back</a>
+                <a href="{{ route('form', ['page' => request()->get('page')]) }}" class="btn btn-outline-secondary">&larr; Back</a>
+
             </div>
         </div>
     </div>

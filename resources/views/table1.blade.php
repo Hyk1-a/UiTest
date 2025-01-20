@@ -44,7 +44,9 @@
                             <td>{{ Str::words($item->sistername,2,'...') }}</td>
                             <td>{{ Str::words($item->about, 5, ' ...') }}</td>
                             <td>{{ \Carbon\Carbon::parse($item->dob)->format('d-m-Y') }}</td>
-                            <td><a href="{{ route('view', $item->id) }}" class="btn btn-success">view</a></td>
+                            <td>
+                                <a href="{{ route('view', ['id' => $item->id, 'page' => $data->currentPage()]) }}" class="btn btn-success">View</a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

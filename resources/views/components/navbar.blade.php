@@ -2,8 +2,9 @@
     <div class="container-fluid">
         <!-- Offcanvas Toggle Button -->
         <button class="btn btn-white ms-0" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"> <i class="bi bi-list"
-                style="font-size: 30px;"></i> </button>
+            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+            <i class="bi bi-list" style="font-size: 30px;"></i>
+        </button>
 
         <!-- Brand -->
         <a class="navbar-brand ms-2" href="{{ route('welcome') }}">
@@ -19,21 +20,14 @@
         <!-- Navbar Links -->
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Register </a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Dropdown bar
-                    </a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown link</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another Action</a></li>
-                        <li><a class="dropdown-item" href="#">Something Here</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                 </li>
             </ul>
@@ -42,40 +36,29 @@
 </nav>
 
 <!-- Offcanvas Menu -->
-<div class="offcanvas offcanvas-start" style="width: 250px;" data-bs-scroll="true" tabindex="-1"
-    id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+<div class="offcanvas offcanvas-start"  style="width: 250px;" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Menu</h5>
-        <button type="button" class="btn btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></i></button>
+        <button type="button" class="btn btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <hr>
     <div class="offcanvas-body">
         <div class="d-flex flex-column">
             <a href="{{ route('welcome') }}" class="btn btn-outline-secondary d-flex align-items-center mb-2">
-                <i class="bi bi-house-fill" style="font-size: 30px;"></i>
-                <span class="mx-3">Home</span>
+                <i class="bi bi-house-fill" style="font-size: 30px;"></i><span class="mx-3">Home</span>
             </a>
-            
             <a href="{{ route('table') }}" class="btn btn-outline-secondary d-flex align-items-center mb-2">
-                <i class="bi bi-table" style="font-size: 30px;"></i>
-                <span class="mx-3">Table</span>
+                <i class="bi bi-table" style="font-size: 30px;"></i><span class="mx-3">Table</span>
             </a>
-            
             <a href="{{ route('form') }}" class="btn btn-outline-secondary d-flex align-items-center mb-2">
-                <i class="bi bi-table" style="font-size: 30px;"></i>
-                <span class="mx-3">Table 1</span>
+                <i class="bi bi-table" style="font-size: 30px;"></i><span class="mx-3">Table 1</span>
             </a>
-            
             <a href="#" class="btn btn-outline-secondary d-flex align-items-center mb-2">
-                <i class="bi bi-gear" style="font-size: 30px;"></i>
-                <span class="mx-2">Settings</span>
+                <i class="bi bi-gear" style="font-size: 30px;"></i><span class="mx-2">Settings</span>
             </a>
-
             <a href="#" class="btn btn-outline-secondary d-flex align-items-center mb-2">
-                <i class="bi bi-box-arrow-right" style="font-size: 30px;"></i>
-                <span class="mx-1">Logout</span>
+                <i class="bi bi-box-arrow-right" style="font-size: 30px;"></i><span class="mx-1">Logout</span>
             </a>
-
         </div>
     </div>
 </div>
